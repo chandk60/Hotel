@@ -19,3 +19,21 @@ document.getElementById("reservationForm").addEventListener("submit", function(e
   
   this.querySelector("button").disabled = true; // prevent double submission
 });
+
+function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DgL000005QNpP',
+				'GitHUb',
+				'https://orgfarm-176d167232-dev-ed.develop.my.site.com/ESWGitHUb1754657375029',
+				{
+					scrt2URL: 'https://orgfarm-176d167232-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+
